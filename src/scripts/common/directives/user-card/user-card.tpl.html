@@ -1,0 +1,13 @@
+<div class="user-card" bindonce>
+  <span class="user-card-icon" user-icon="user"></span>
+  <span class="user-card-name" bo-text="user | fullName"></span>
+  <span class="user-card-email" bo-text="user.email"></span>
+  <span class="user-card-status-icon"
+        bo-class="{ 'test-icon-ok': user.status === 'active', 'test-icon-clock': user.status === 'registered' }"
+        bo-attr bo-attr-title="user.status"></span>
+  <ul class="user-social-icons">
+    <li ng-repeat="(name, url) in user.socials track by $index">
+      <a bo-href="url" class="user-social-icon" bo-class="getSocialIcon(name)"></a>
+    </li>
+  </ul>
+</div>

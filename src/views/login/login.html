@@ -1,0 +1,10 @@
+<form id="login-form" name="loginForm" ng-submit="onLogin(userName, password)" novalidate="novalidate" autocomplete="off">
+  <span validation-messages-for=""></span>
+  <label for="user-name">User name</label>
+  <input type="text" id="user-name" name="userName" ng-model="userName" maxlength="128" placeholder="your email address" autofocus />
+  <span validation-messages-for="userName"></span>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" ng-model="password" maxlength="128" />
+  <span validation-messages-for="password"></span>
+  <button type="submit" class="btn btn-primary">Log in</button>
+</form>

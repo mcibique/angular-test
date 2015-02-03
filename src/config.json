@@ -1,0 +1,18 @@
+{
+  "debug": false,
+  "logger": {
+    "enabled": false,
+    "enabledNames": "*",
+    "maximumNameLength": 10
+  },
+  "urls": {
+    "api": "api/",
+    "defaultUrl": "/playground/",
+    "dialogs": "dialogs/",
+    "directives": "directives/",
+    "resources": "api/",
+    "root": "/",
+    "views": "views/"
+  },
+  "version": "0.0.0"
+}

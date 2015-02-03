@@ -1,0 +1,27 @@
+<h2>Images</h2>
+
+<button class="btn btn-primary" ng-click="changeStatus()">Change class ({{ currentStatus }})</button>
+
+<div class="images">
+  <section>
+    <h3>Sprite:</h3>
+    <p>Switching background-position of the generated sprite.</p>
+    <div class="images-sprite" ng-class="currentStatus"></div>
+  </section>
+  <section>
+    <h3>Inline images:</h3>
+    <p>Switching background-image between inline images.</p>
+    <div class="images-inline" ng-class="currentStatus"></div>
+  </section>
+  <section>
+    <h3>svg/png fallback</h3>
+    <p>SVG as a background with png fallback for IE8.</p>
+    <div class="images-svg-png"></div>
+  </section>
+</div>
+
+<nav>
+  <ul>
+    <li><a ui-sref="playground.index">back</a></li>
+  </ul>
+</nav>

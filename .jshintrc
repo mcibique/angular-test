@@ -1,0 +1,30 @@
+{
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "es3": true,
+  "forin": true,
+  "freeze": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "plusplus": false,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "strict": true,
+  "maxlen": 120,
+  "browser": true,
+  "devel": true,
+  "jquery": true,
+  "node": true,
+  "esnext": true,
+  "indent": 2,
+  "globals": {
+    "require": false
+  }
+}

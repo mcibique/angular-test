@@ -1,0 +1,16 @@
+@import '../mixins';
+
+#login-form {
+  $padding: 20px;
+  $logo: 'login/logo.png';
+  $padding-top: $padding + image-height($logo) + $padding;
+
+  @include border;
+  @include border-radius(5px);
+  @include box-shadow(0 0 5px 0 rgba($color-border, .5));
+  font-size: 1.5rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: $padding-top $padding $padding;
+  background: #fff image-url($logo) no-repeat center top $padding;
+}

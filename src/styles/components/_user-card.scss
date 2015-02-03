@@ -1,0 +1,77 @@
+@import '../mixins';
+
+.user-card {
+  $border-color: $color-title-border;
+  $background: $color-title-active;
+  $text-color: $color-title-text;
+  $text-focus: $color-title-focus;
+  $icon-size: 6rem;
+  $status-icon-size: 3rem;
+  $status-icon-background: $color-title-text;
+  $status-icon-text: $color-title-active;
+  $padding-left-right: 2rem;
+  $padding-top-bottom: 1.5rem;
+
+  @include border-radius;
+  padding: $padding-top-bottom $padding-left-right;
+  background-color: $background;
+  position: relative;
+
+  .user-card-icon {
+    position: absolute;
+  }
+
+  %user-card-text {
+    @include ellipsis;
+    word-break: normal;
+    display: block;
+    margin-left: $icon-size + $padding-left-right;
+    color: $text-color;
+    line-height: $icon-size / 2;
+  }
+
+  .user-card-email {
+    @extend %user-card-text;
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+
+  .user-card-name {
+    @extend %user-card-text;
+    margin-right: $status-icon-size + $padding-left-right;
+    font-size: 2.4rem;
+  }
+
+  .user-card-status-icon {
+    @include border-radius;
+    position: absolute;
+    right: $padding-left-right;
+    top: $padding-top-bottom;
+    background-color: $status-icon-background;
+    color: $status-icon-text;
+    font-size: $status-icon-size / 2;
+    line-height: $status-icon-size;
+    width: $status-icon-size;
+    text-align: center;
+  }
+
+  .user-social-icons {
+    $icon-size: 1.5rem;
+    $icon-distance: $icon-size / 2;
+
+    @include inline-list;
+    position: absolute;
+    right: $padding-left-right / 2 - $icon-distance;
+    bottom: $padding-top-bottom / 3;
+
+    .user-social-icon {
+      font-size: $icon-size;
+      margin-right: $icon-distance;
+      color: $text-color;
+
+      &:hover {
+        color: $text-focus;
+      }
+    }
+  }
+}

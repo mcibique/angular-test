@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="description" content="test web"/>
+  <meta name="viewport" content="width=device-width"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Test web</title>
+  <!-- build:css(.tmp) styles/default.css -->
+  <link rel="stylesheet" href="/styles/default.css" />
+  <!-- endbuild -->
+</head>
+<body ng-app="test">
+<!-- build:js scripts/shims.min.js -->
+  <!--[if lt IE 9]>
+  <script src="/scripts/vendor/html5shiv/dist/html5shiv.js"></script>
+  <script src="/scripts/vendor/es5-shim/es5-shim.js"></script>
+  <script src="/scripts/vendor/json3/lib/json3.js"></script>
+  <script src="/scripts/vendor/REM-unit-polyfill/js/rem.js"></script>
+  <![endif]-->
+  <!-- endbuild -->
+<div class="container">
+  <div id="page">
+    <header ui-view="header"></header>
+    <main ui-view="main"></main>
+    <footer ui-view="footer"></footer>
+  </div>
+</div>
+
+  <!-- build:js scripts/vendor.min.js -->
+  <!-- bower:js -->
+  <script src="/scripts/vendor/jquery/dist/jquery.js"></script>
+  <script src="/scripts/vendor/angular/angular.js"></script>
+  <script src="/scripts/vendor/angular-animate/angular-animate.js"></script>
+  <script src="/scripts/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="/scripts/vendor/angular-i18n/angular-locale_en-gb.js"></script>
+  <script src="/scripts/vendor/moment/moment.js"></script>
+  <script src="/scripts/vendor/angular-moment/angular-moment.js"></script>
+  <script src="/scripts/vendor/angular-resource/angular-resource.js"></script>
+  <script src="/scripts/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="/scripts/vendor/lodash/dist/lodash.compat.js"></script>
+  <script src="/scripts/vendor/respond/dest/respond.src.js"></script>
+  <script src="/scripts/vendor/angular-bindonce/bindonce.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,src}) scripts/app.min.js -->
+  <!-- scripts -->
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/common/dialogs/controllers.js"></script>
+  <script src="/scripts/common/dialogs/module.js"></script>
+  <script src="/scripts/common/dialogs/module.tpl.js"></script>
+  <script src="/scripts/common/dialogs/services.js"></script>
+  <script src="/scripts/common/directives/forms/forms.js"></script>
+  <script src="/scripts/common/directives/module.js"></script>
+  <script src="/scripts/common/directives/module.tpl.js"></script>
+  <script src="/scripts/common/directives/user-card/user-card.js"></script>
+  <script src="/scripts/common/directives/user-icon/user-icon.js"></script>
+  <script src="/scripts/common/errors/error-handler.js"></script>
+  <script src="/scripts/common/errors/module.js"></script>
+  <script src="/scripts/common/errors/request-error-handler.js"></script>
+  <script src="/scripts/common/errors/server-error-logger.js"></script>
+  <script src="/scripts/common/errors/state-error-handler.js"></script>
+  <script src="/scripts/common/filters/full-name.js"></script>
+  <script src="/scripts/common/filters/module.js"></script>
+  <script src="/scripts/common/logger/console-logger.js"></script>
+  <script src="/scripts/common/logger/empty-logger.js"></script>
+  <script src="/scripts/common/logger/logger-name-formatter.js"></script>
+  <script src="/scripts/common/logger/module.js"></script>
+  <script src="/scripts/common/module.js"></script>
+  <script src="/scripts/common/security/jwt.js"></script>
+  <script src="/scripts/common/security/module.js"></script>
+  <script src="/scripts/common/urls/module.js"></script>
+  <script src="/scripts/common/urls/url-builder.js"></script>
+  <script src="/scripts/config.js"></script>
+  <script src="/scripts/resources/module.js"></script>
+  <script src="/scripts/resources/profile.js"></script>
+  <script src="/scripts/states/login/controllers.js"></script>
+  <script src="/scripts/states/login/module.js"></script>
+  <script src="/scripts/states/login/services.js"></script>
+  <script src="/scripts/states/main/controllers.js"></script>
+  <script src="/scripts/states/main/module.js"></script>
+  <script src="/scripts/states/module.js"></script>
+  <script src="/scripts/states/playground/controllers.js"></script>
+  <script src="/scripts/states/playground/module.js"></script>
+  <script src="/scripts/states/profile/controllers.js"></script>
+  <script src="/scripts/states/profile/module.js"></script>
+  <!-- scripts end -->
+  <!-- endbuild -->
+</body>
+</html>

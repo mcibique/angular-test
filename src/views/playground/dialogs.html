@@ -1,0 +1,22 @@
+<h2>Dialogs</h2>
+
+<nav>
+  <ul>
+    <li><a ui-sref="playground.index">back</a></li>
+  </ul>
+</nav>
+
+<form name="dialogForm" novalidate="novalidate" autocomplete="off">
+  <label for="custom-message">Custom message:</label>
+  <textarea rows="3" id="custom-message" name="customMessage" ng-model="customMessage"
+            placeholder="Enter custom message"></textarea>
+  <label for="severity">Severity:</label>
+  <select name="severity" id="severity" class="form-control" ng-model="severity">
+    <option value="{{ value }}" ng-selected="severity === value" ng-repeat="value in ['info', 'error']">{{ value }}
+    </option>
+  </select>
+</form>
+<div class="btn-group">
+  <button class="btn btn-primary" ng-click="showCustomMessage()">Open dialog</button>
+  <button class="btn btn-primary" ng-click="showConfirmDialog()">Open confirm dialog</button>
+</div>

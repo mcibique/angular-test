@@ -1,0 +1,27 @@
+@import 'mixins';
+@import 'variables';
+
+@if compass-env() == 'development' {
+  $icon-font-path: '../fonts/vendor/bootstrap-sass-official/assets/fonts/bootstrap/';
+} @else {
+  $icon-font-path: '/fonts/bootstrap/';
+}
+$font-size-base: $font-size;
+$line-height-base: $font-desired-line-size;
+$text-color: $color-font;
+$body-bg: $color-background;
+$border-radius-base: $border-radius;
+$input-border-focus: $color-title-text;
+
+// Compass support
+@function twbs-font-path($path) {
+  @return font-url($path, true);
+}
+
+@function twbs-image-path($path) {
+  @return image-url($path, true);
+}
+
+.modal-backdrop {
+  min-height: 100%;
+}

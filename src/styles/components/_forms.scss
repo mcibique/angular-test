@@ -1,0 +1,78 @@
+@import '../mixins';
+
+form {
+  label {
+    color: $color-font;
+    color: rgba($color-font, .6);
+    margin-bottom: 0;
+    font-weight: bold;
+    line-height: 2.5rem;
+
+    &:after {
+      content: '';
+      display: block;
+    }
+  }
+
+  %text-input {
+    $border-width: .1rem;
+    $padding-top-bottom: .5rem;
+
+    @include border($color-border, $border-width);
+    @include border-radius;
+    @include transition(box-shadow .2s linear);
+    width: 100%;
+    padding: $padding-top-bottom 1rem;
+    line-height: 3rem - 2 * $padding-top-bottom;
+    margin-bottom: .5rem - 2 * $border-width;
+
+    &:focus {
+      outline: none;
+      @include box-shadow(0 0 5px 0 rgba($color-input-focus, .5));
+    }
+
+    &.invalid {
+      @include box-shadow(0 0 5px 0 rgba($color-input-error, .5));
+    }
+  }
+
+  input {
+    @extend %text-input;
+  }
+
+  textarea {
+    @extend %text-input;
+    display: block;
+  }
+
+  select {
+    @extend %text-input;
+    width: auto;
+    height: 3rem;
+  }
+
+  .btn {
+    margin-top: .5rem;
+  }
+}
+
+.validation-messages {
+  .validation-message {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: $color-error;
+    color: rgba($color-error, .75);
+    letter-spacing: .05rem;
+  }
+}
+
+.validation-summary {
+  @include border($color-error);
+  @include border-radius;
+  padding: .5rem 0;
+
+  .validation-message {
+    padding: 0 10px;
+  }
+}

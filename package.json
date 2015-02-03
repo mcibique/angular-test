@@ -1,0 +1,67 @@
+{
+  "name": "angular-test",
+  "version": "0.0.0",
+  "description": "angular test application",
+  "main": "index.js",
+  "scripts": {
+    "start": "grunt serve:dist",
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcibique/angular-test.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "private": true,
+  "author": "mcibique",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcibique/angular-test/issues"
+  },
+  "homepage": "https://github.com/mcibique/angular-test",
+  "devDependencies": {
+    "connect-livereload": "*",
+    "connect-modrewrite": "*",
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-filerev": "*",
+    "grunt-html2js": "*",
+    "grunt-htmlhint": "*",
+    "grunt-jsbeautifier": "*",
+    "grunt-jscs": "*",
+    "grunt-karma": "*",
+    "grunt-newer": "*",
+    "grunt-ng-annotate": "*",
+    "grunt-ng-constant": "*",
+    "grunt-sails-linker": "*",
+    "grunt-scss-lint": "*",
+    "grunt-svgmin": "*",
+    "grunt-usemin": "*",
+    "grunt-wiredep": "*",
+    "jasmine-core": "*",
+    "jasmine-reporters": "1.*",
+    "jshint-stylish": "*",
+    "karma": "*",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*",
+    "load-grunt-tasks": "*",
+    "lodash": "*",
+    "mime": "*",
+    "protractor": "*",
+    "time-grunt": "*"
+  }
+}

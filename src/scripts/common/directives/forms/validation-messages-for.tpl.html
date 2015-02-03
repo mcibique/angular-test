@@ -1,0 +1,3 @@
+<ul class="validation-messages" ng-if="errors.length" ng-class="{ 'validation-summary': !name }">
+  <li class="validation-message" ng-repeat="error in errors track by $index">{{ formatErrorMessage(error) }}</li>
+</ul>

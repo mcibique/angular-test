@@ -1,0 +1,29 @@
+$color-background: #efefef;
+$color-border: #ccc;
+$color-font: #333;
+
+$color-shadow: #888;
+$color-error: #f00;
+
+$color-input-focus: $color-shadow;
+$color-input-error: $color-error;
+
+$font-size: 1.4rem;
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-desired-line-size: 2rem;
+$border-radius: 2px;
+
+// colors from http://paletton.com/#uid=30l0u0kk8k8aDunfToToTfTunaD
+$color-title-background: #2c4869;
+$color-title-active: #183353;
+$color-title-focus: #476282;
+$color-title-text: #6e849e;
+$color-title-border: #071d37;
+
+$color-links-background: #508b33;
+$color-links-active: #72ab56;
+$color-links-default: $color-links-active;
+$color-links-focus: #346d18;
+$color-links-hover: $color-links-focus;

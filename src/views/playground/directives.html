@@ -1,0 +1,14 @@
+<h2>Directives sample</h2>
+
+<nav>
+  <ul>
+    <li><a ui-sref="playground.index">back</a></li>
+  </ul>
+</nav>
+
+<ul class="row users-list">
+  <li class="col-sm-6" ng-repeat="user in users track by $index">
+    <div user-card="user"></div>
+  </li>
+</ul>
+

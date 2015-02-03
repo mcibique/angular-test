@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'compass/css3/';
+@import 'compass/support/';
+@import 'compass/reset/utilities/';
+@import 'compass/typography/';
+@import 'compass/utilities/';
+@import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins';
+
+@mixin border($color: $color-border, $width: 1px, $style: solid) {
+  border: $width $style $color;
+}
+
+@mixin border-top($color: $color-border, $width: 1px, $style: solid) {
+  border-top: $width $style $color;
+}
+
+@mixin border-bottom($color: $color-border, $width: 1px, $style: solid) {
+  border-bottom: $width $style $color;
+}
+
+@mixin border-left($color: $color-border, $width: 1px, $style: solid) {
+  border-left: $width $style $color;
+}
+
+@mixin border-right($color: $color-border, $width: 1px, $style: solid) {
+  border-right: $width $style $color;
+}

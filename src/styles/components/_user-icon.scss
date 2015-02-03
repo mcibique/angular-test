@@ -1,0 +1,20 @@
+@import '../variables';
+
+.user-icon {
+  $icon-size: 6rem;
+  $icon-background: $color-title-background;
+  $icon-text: $color-title-text;
+
+  @include inline-block;
+  @include border-radius(50%);
+  background-color: $icon-background;
+  width: $icon-size;
+  height: $icon-size;
+  text-align: center;
+
+  .user-icon-text {
+    color: $icon-text;
+    font-size: $icon-size / 2;
+    line-height: $icon-size;
+  }
+}
