@@ -98,7 +98,7 @@ module.exports = function (grunt) {
         var modRewrite = require('connect-modrewrite');
         return modRewrite([
           '^/api/(.*)$ http://localhost:9004/api/$1 [NC][P][L]',
-          '!^/(?:fonts|images|scripts|styles|views)/ / [NC][L]'
+          '!^/(?:fonts/|images/|scripts/|styles/|views/|favicon.ico) / [NC][L]'
         ]);
       };
 
@@ -270,7 +270,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= project.src %>/images',
-          src: ['**/*.{png,jpg,gif}', '!sprites/**/*'],
+          src: ['**/*.{png,jpg,gif,ico}', '!sprites/**/*'],
           dest: '<%= project.dist %>/images'
         }]
       }
