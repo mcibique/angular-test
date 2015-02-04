@@ -15,15 +15,13 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ],
   "dependencies": {
     "angular": "1.2.*",
     "angular-animate": "1.2.*",
     "angular-bootstrap": "0.*",
     "angular-i18n": "1.2.*",
-    "angular-moment": "0.8.*",
     "angular-resource": "1.2.*",
     "angular-ui-router": "0.*",
     "bootstrap-sass-official": "3.*",
@@ -32,10 +30,9 @@
     "jquery": "1.*",
     "json3": "3.*",
     "lodash": "2.*",
-    "moment": "2.*",
-    "REM-unit-polyfill": "*",
+    "REM-unit-polyfill": "1.*",
     "respond": "1.*",
-    "angular-bindonce": "*"
+    "angular-bindonce": "0.3.*"
   },
   "overrides": {
     "angular-i18n": {
