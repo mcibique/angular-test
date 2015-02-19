@@ -1,0 +1,61 @@
+@import '../mixins';
+
+.user-management {
+  @include clearfix;
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  %panel {
+    @include border;
+    float: left;
+    width: 100%;
+  }
+
+  .users-list {
+    @extend %panel;
+
+    &.col {
+      width: 59%;
+    }
+
+    .user-item {
+      padding: .5rem 1rem;
+      line-height: 3rem;
+      @include border-bottom;
+
+      &:last-child {
+        border: 0;
+      }
+
+      &:hover {
+        background-color: rgba($color-links-background, .2);
+        @include transition(0s linear background-color 100ms);
+      }
+    }
+  }
+
+  .users-list-buttonry {
+    clear: both;
+  }
+
+  .user-detail {
+    @extend %panel;
+    display: none;
+    padding: .5rem 1rem;
+
+    &.col {
+      display: block;
+      margin-left: 2%;
+      width: 39%;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+  }
+}

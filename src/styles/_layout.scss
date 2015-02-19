@@ -100,8 +100,7 @@ header {
     }
   }
 
-  #login,
-  #logout {
+  #auth-state {
     font-size: 1.5rem;
     line-height: $header-height;
     position: absolute;

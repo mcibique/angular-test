@@ -1,0 +1,12 @@
+<h3>{{ user.profile | fullName }}</h3>
+<span>{{ user.userName }}</span>
+<span>{{ user.profile.email }}</span>
+<div class="buttonry">
+  <button class="btn btn-primary" ui-sref="users.edit({ id: user.id })">Edit</button>
+  <button class="btn btn-default" ui-sref="users">Close</button>
+</div>
+<div class="buttonry">
+  <button class="btn btn-default" ng-click="onDelete()">Delete</button>
+  <button class="btn btn-default" ng-click="onBlock()" ng-if="!user.blocked">Block</button>
+  <button class="btn btn-default" ng-click="onUnblock()" ng-if="user.blocked">Unblock</button>
+</div>
