@@ -12,21 +12,30 @@
 
   %panel {
     @include border;
+    @include border-radius;
     float: left;
     width: 100%;
   }
+
+  $left-panel-width: 59%;
+  $panel-gap: 1%;
+  $right-panel-width: 100% - ($left-panel-width + $panel-gap);
 
   .users-list {
     @extend %panel;
 
     &.col {
-      width: 59%;
+      width: $left-panel-width;
+    }
+
+    %user-list-item {
+      padding: .5rem 1rem;
     }
 
     .user-item {
-      padding: .5rem 1rem;
-      line-height: 3rem;
       @include border-bottom;
+      @extend %user-list-item;
+      line-height: 3rem;
 
       &:last-child {
         border: 0;
@@ -36,6 +45,14 @@
         background-color: rgba($color-links-background, .2);
         @include transition(0s linear background-color 100ms);
       }
+
+      .user-item-link {
+        display: block;
+      }
+    }
+
+    .users-list-buttonry {
+      @extend %user-list-item;
     }
   }
 
@@ -50,12 +67,25 @@
 
     &.col {
       display: block;
-      margin-left: 2%;
-      width: 39%;
+      margin-left: $panel-gap;
+      width: $right-panel-width;
     }
 
     h3 {
       font-weight: bold;
+    }
+
+    .buttonry {
+      @include clearfix;
+      margin-top: 2rem;
+
+      .crud-buttons {
+        float: left;
+      }
+
+      .action-buttons {
+        float: right;
+      }
     }
   }
 }
