@@ -12,11 +12,11 @@
         },
         block: {
           url: urls.resource('/users/:id/block'),
-          method: 'PATCH'
+          method: 'POST'
         },
         unblock: {
           url: urls.resource('/users/:id/unblock'),
-          method: 'PATCH'
+          method: 'POST'
         }
       });
     });
