@@ -1,0 +1,13 @@
+<form name="userForm" autocomplete="off" novalidate ng-submit="onFormSubmit(userForm)">
+  <label for="user-name">User Name</label>
+  <input type="text" ng-model="user.userName" id="user-name" name="userName" ng-disabled="mode === 'edit'" focus="mode !== 'edit'" />
+  <label for="first-name">First Name</label>
+  <input type="text" ng-model="user.profile.firstName" id="first-name" name="profile.firstName" focus="mode === 'edit'" />
+  <label for="last-name">Last Name</label>
+  <input type="text" ng-model="user.profile.lastName" id="last-name" name="profile.lastName" />
+  <label for="email">Email</label>
+  <input type="email" ng-model="user.profile.email" id="email" name="profile.email" />
+
+  <button type="submit" class="btn btn-primary">Save</button>
+  <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
+</form>

@@ -176,6 +176,25 @@
           };
         }
       };
+    })
+    .directive('focus', function ($timeout) {
+      return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+          var timeout;
+          scope.$watch(attrs.focus, function (newValue) {
+            if (newValue) {
+              timeout = $timeout(function () {
+                element.focus();
+              }, 0, false);
+            }
+          });
+
+          scope.$on('$destroy', function () {
+            $timeout.cancel(timeout);
+          });
+        }
+      };
     });
 
 })(window.angular);

@@ -1,3 +1,6 @@
 <h1><a ui-sref="playground.index">Test web</a></h1>
-<a id="logout" href="javascript:void(0);" ng-click="logout()" ng-if="isAuthenticated() && isNotLoginState()">Logout</a>
-<a id="login" href="javascript:void(0);" ui-sref="login" ng-if="!isAuthenticated() && isNotLoginState()">Login</a>
+<span id="auth-state" ng-if="isNotLoginState()">
+  <a ui-sref="profile">Profile</a>
+  <a href="javascript:void(0);" ng-click="logout()" ng-if="isAuthenticated()">Logout</a>
+  <a href="javascript:void(0);" ui-sref="login" ng-if="!isAuthenticated()">Login</a>
+</span>

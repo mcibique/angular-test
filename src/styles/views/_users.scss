@@ -1,0 +1,91 @@
+@import '../mixins';
+
+.user-management {
+  @include clearfix;
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  %panel {
+    @include border;
+    @include border-radius;
+    float: left;
+    width: 100%;
+  }
+
+  $left-panel-width: 59%;
+  $panel-gap: 1%;
+  $right-panel-width: 100% - ($left-panel-width + $panel-gap);
+
+  .users-list {
+    @extend %panel;
+
+    &.col {
+      width: $left-panel-width;
+    }
+
+    %user-list-item {
+      padding: .5rem 1rem;
+    }
+
+    .user-item {
+      @include border-bottom;
+      @extend %user-list-item;
+      line-height: 3rem;
+
+      &:last-child {
+        border: 0;
+      }
+
+      &:hover {
+        background-color: rgba($color-links-background, .2);
+        @include transition(0s linear background-color 100ms);
+      }
+
+      .user-item-link {
+        display: block;
+      }
+    }
+
+    .users-list-buttonry {
+      @extend %user-list-item;
+    }
+  }
+
+  .users-list-buttonry {
+    clear: both;
+  }
+
+  .user-detail {
+    @extend %panel;
+    display: none;
+    padding: .5rem 1rem;
+
+    &.col {
+      display: block;
+      margin-left: $panel-gap;
+      width: $right-panel-width;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+
+    .buttonry {
+      @include clearfix;
+      margin-top: 2rem;
+
+      .crud-buttons {
+        float: left;
+      }
+
+      .action-buttons {
+        float: right;
+      }
+    }
+  }
+}

@@ -3,8 +3,8 @@
 
   angular
     .module('test.resources', [
-      'ngResource',
-      'test.resources.profile'
+      'test.resources.profile',
+      'test.resources.users'
     ])
     .run(function (logger) {
       var log = logger.get('module');

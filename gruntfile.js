@@ -527,7 +527,7 @@ module.exports = function (grunt) {
         tasks: ['compass:dev', 'autoprefixer']
       },
       html: {
-        files: ['<%= project.src %>/**/*.html'],
+        files: ['<%= project.src %>/views/**/*.html'],
         options: {
           livereload: true
         }

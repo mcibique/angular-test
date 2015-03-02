@@ -1,0 +1,16 @@
+<div class="user-management">
+  <h2>User Management</h2>
+
+  <ul class="users-list" ng-class="{ col: isDetailVisible() }">
+    <li class="user-item" ng-if="!users.length">No users available. Do you want to <a ui-sref="users.create">create</a> one?</li>
+    <li class="user-item" ng-repeat="user in users"><a class="user-item-link" ui-sref="users.detail({ id: user.id })"><span>{{ user.profile | fullName }}</span><span ng-if="user.blocked"> (blocked)</span></a></li>
+    <li class="users-list-buttonry" ng-if="users.length && !$state.is('users.create')">
+      <button class="btn btn-default" ui-sref="users.create">Create</button>
+    </li>
+  </ul>
+
+  <div class="user-detail" ui-view="" ng-class="{ col: isDetailVisible() }">
+  </div>
+
+</div>
+
