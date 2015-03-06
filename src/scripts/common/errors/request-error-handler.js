@@ -3,9 +3,10 @@
 
   angular
     .module('test.common.errors.requestErrorHandler', [
-      'test.common.logger'
+      'test.common.logger',
+      'test.common.security.jwt'
     ])
-    .factory('requestErrorHandler', function ($q, $injector, logger) {
+    .factory('requestErrorHandler', function ($q, $injector, logger, jwt) {
       var log = logger.get('http');
 
       return {
@@ -25,6 +26,19 @@
         },
         responseError: function (rejection) {
           log.error('Response error:', rejection);
+
+          if (rejection.status === 401) {
+            jwt.clear();
+            $injector.get('dialogs').error('Unauthorized access.');
+            $injector.get('$state').go('login');
+          } else if (rejection.status === 500) {
+            $injector.get('errorContext').set(rejection);
+            $injector.get('$state').go('error.generic');
+          } else if (rejection.status === 404) {
+            $injector.get('errorContext').set(rejection);
+            $injector.get('$state').go('error.not-found');
+          }
+
           return $q.reject(rejection);
         }
       };

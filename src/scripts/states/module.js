@@ -4,6 +4,7 @@
   angular
     .module('test.states', [
       'pasvaz.bindonce',
+      'test.states.errors',
       'test.states.login',
       'test.states.main',
       'test.states.playground',
