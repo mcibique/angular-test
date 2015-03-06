@@ -94,6 +94,29 @@
         current = (current + 1) % 3;
         $scope.currentStatus = statuses[current];
       };
+    })
+    .controller('ErrorsController', function ($scope, $state, $stateParams, $http, urls) {
+      $scope.$state = $state;
+      $scope.$stateParams = $stateParams;
+
+      $scope.throwUnexpectedServerError = function () {
+        $http.get(urls.api('debug/throw/'));
+      };
+
+      $scope.throwUnauthorizedError = function () {
+        $http.get(urls.api('debug/echo/401'));
+      };
+
+      $scope.throwErrorWithCustomMessage = function (message) {
+        $http.get(urls.api('debug/throw/'), { params: {
+            message: message
+          }
+        });
+      };
+
+      $scope.throwNotFoundError = function () {
+        $http.get(urls.api('debug/page/which/does/not/exist'));
+      };
     });
 
 })(window.angular);

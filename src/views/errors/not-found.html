@@ -1,0 +1,16 @@
+<div class="not-found-error">
+  <h2>Not found</h2>
+
+  <h3>Sorry, this page cannot be found</h3>
+
+  <span>Please, try to:</span>
+  <ol class="help">
+    <li>Perform operation again.</li>
+    <li>Contact our <a href="mailto:admin@domain.com">support centre</a>.</li>
+  </ol>
+
+  <div class="debug-info" bindonce ng-if="showDebug">
+    <p bo-if="url && method"><strong>Request:</strong> {{ method + ' ' + url }}</p>
+  </div>
+
+</div>

@@ -34,6 +34,11 @@
           url: 'images/',
           templateUrl: urlsProvider.view('playground/images.html'),
           controller: 'ImagesController'
+        })
+        .state('playground.errors', {
+          url: 'errors/',
+          templateUrl: urlsProvider.view('playground/errors.html'),
+          controller: 'ErrorsController'
         });
     });
 

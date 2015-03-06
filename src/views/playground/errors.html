@@ -1,0 +1,22 @@
+<h2>Errors sample</h2>
+
+<nav>
+  <ul>
+    <li><a ui-sref="playground.index">back</a></li>
+  </ul>
+</nav>
+
+<button class="btn btn-primary" ng-click="throwUnexpectedServerError()">Throw unexpected server error</button>
+<button class="btn btn-primary" ng-click="throwUnauthorizedError()">Throw unauthorized error</button>
+<button class="btn btn-primary" ng-click="throwNotFoundError()">Throw not found error</button>
+
+<form name="errorMessageForm" novalidate="novalidate" autocomplete="off" ng-submit="throwErrorWithCustomMessage(customMessage)">
+  <label for="custom-message">Custom message:</label>
+  <textarea rows="3" id="custom-message" name="customMessage" ng-model="customMessage"
+            placeholder="Enter custom message"></textarea>
+  <button type="submit" class="btn btn-primary">Throw error with custom message</button>
+</form>
+
+
+
+

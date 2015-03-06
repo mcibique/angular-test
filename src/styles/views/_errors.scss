@@ -1,0 +1,44 @@
+@import '../mixins';
+
+.not-found-error,
+.unhandled-error {
+  h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-weight: bold;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .help {
+    list-style: decimal;
+    padding-left: 2rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .debug-info {
+    @include border-top;
+    padding-top: 1rem;
+
+    p {
+      line-height: 2.5rem;
+    }
+
+    h3 {
+      margin-top: 2rem;
+    }
+
+    pre {
+      @include border;
+      @include border-radius;
+      padding: 0.5rem;
+    }
+  }
+}
